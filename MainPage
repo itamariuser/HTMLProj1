@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      header{display:block;}
+      @font-face {
+        font-family: outerFonts;
+        src: url(sansation_light.woff);
+      }
+
+      matalaFont {
+        font-family: outerFonts;
+      }
+      aside{display:table-cell;
+        width:300px;
+      }
+      p1{
+        margin-left:20px;
+      }
+      nav{
+        left:0;
+        width:100%;
+
+      }
+      nav ul{
+        margin:0 auto;
+        width:940 px;
+        list-style:none;
+
+      }
+      nav ul li{
+        float:left;
+        background:url("https://preview.ibb.co/dnWQbQ/bkground.png");
+
+      }
+      nav ul li a{
+        display:block;
+        margin-right:20px;
+        width:140px;
+        font-sieze:14px;
+        line-height:44px;
+        text-align:center;
+        text-decoration:none;
+        color:#777
+      }
+      nav ul li a:hover{
+        color:#fff
+      }
+
+      nav ul li.selected a{
+        color:#fff
+      }
+
+      nav ul li.subscribe a{
+        margin-left:22px;
+        padding-left:33px;
+        text-align:left;
+        background:url(https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png) left center no-repeat;
+        background-size:32px;
+      }
+    </style>
+  </head>
+  <style>
+    h1 {
+      text-shadow: 3px 3px #DDDDDD;
+    }
+  </style>
+
+
+  <body>
+
+    <audio autoplay>
+      <source src="audio/BackgroundMusic1.mp3" type="audio/mp3">
+    </audio>
+    <section id="intro">
+      <header>
+        <h1><center>Ha-Blog Shel Shauli</center></h1>
+      </header>
+    </section>
+    <section id="navigation">
+      <nav>
+
+        <ul>
+
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="subscribe"><a href="#">Subscribe via RSS</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section id="searchPosts">
+      <form oninput="numOfRepliesDisplay.value=numOfReplies.value">
+        <h2>Search blogs:</h2>
+        Posted after date:
+        <input type="date" name="bDayDate">
+        <br><br>
+        Author name:
+        <input name="authorName">
+        <br><br>
+        Author email:
+        <input type="email" name="email">
+        <br><br>
+        Words from post body:
+        <input name="wordsFromPost">
+        <br><br>
+        Minimum number of replies:
+        <input type="range" name="numOfReplies" min="0" max="10">
+        <output name="numOfRepliesDisplay">0</output>
+        <br><br>
+        <button name="btnSearch">Search post</button> 
+      </form>
+    </section>
+    <section>
+
+    </section>
+    <section id="articles">
+      <article class="blogPost">
+        <header><h2>A joke.</h2>
+          <p>Posted on <time datetime="2009-04-14T23:12:50+02:00">April 14th, 2017</time> by <a href="#">Shauli</a>
+        </header>
+        <p> Joke joke joke</p>
+      </article>
+    </section>
+    <section id="comments">
+      <header>
+        <h3>Comments</h3>
+      </header>
+      <article>
+        <header>
+          <a href="#">Eyal Kitzis</a> on <time datetime="2009-06-29T23:35:20+01:00">April 15th 2017 at 12:14</time>
+        </header>
+        <p1>HAHA FUNNY</p1>
+      </article>
+      <br>
+      <article>
+        <header>
+          <a href="#">Asi Cohen</a> on <time datetime="2009-06-29T23:35:20+01:00">April 16th 2017 at 23:35</time>
+        </header>
+        <p1>Didn't laugh.</p1>
+      </article>
+    </section>
+  </body>
+</html>
